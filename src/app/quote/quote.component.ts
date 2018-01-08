@@ -16,7 +16,7 @@ export class QuoteComponent implements OnInit {
 new Quote(5,'success before death.','I may do some good before I am dead--be a sort of success as a frightful example of what not to do; and so illustrate a moral story.',new Date(2018,3,13)),
 new Quote(6,'matching your life blueprint.','It is not until you change your identity to match your life blueprint that you will understand why everything in the past never worked.',new Date(2018,4,177)),
 ]
-deleteGoal(isComplete,index){
+goalDelete(isComplete,index){
        if (isComplete){
            let toDelete=confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
 
@@ -39,7 +39,6 @@ completeQuote(isComplete,index){
 toogleDetails(index){
   this.quotes[index].showDescription =!this.quotes[index].showDescription;
 }
-
 like : number= 2;
     dislike : number =5;
     // x:string = "-1"
