@@ -3,8 +3,10 @@
   <h1>  Welcome to {{ title }}!  </h1>
   </div>
   <div>
-  <ul>
-  <li *ngFor='let quote of quotes'>{{quote.name}}</li>
-   <app-quote-details [goal]='goal'></app-quote-details>
-</ul>
+  <div *ngFor='let quote of quotes;let i = index'>
+        <li >{{quote.name}}</li>
+        <button  (click)='toogleDetails(i)'>More Details</button>
+
+        <app-quote-details *ngIf="quote.showDescription" [quote]='quote'></app-quote-details>
+    </div>
 </div>
