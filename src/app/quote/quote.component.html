@@ -9,7 +9,6 @@
           <div><p>{{quote.name}}</p></div>
         <button  (click)='toogleDetails(i)'>More Details</button>
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-details>
-
     </div>
 </div>
   </div>
