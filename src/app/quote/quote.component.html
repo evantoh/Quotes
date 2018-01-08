@@ -1,6 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>  Welcome to {{ title }}!  </h1>
+  <div class="container">
+    <div class="row">
+        <app-quote-form></app-quote-form>
+    </div>
+</div>
+
+
+  <button type="button" class="btn btn-success" (click)="likes()">{{like}}like</button>
+   <button type="button" class="btn btn-warning" (click)="dislikes()">{{dislike}}dislike </button>
 
   <div>
   <div class="well col-md-12" *ngFor='let quote of quotes;let i = index'>
@@ -8,6 +17,8 @@
 
           <div><p>{{quote.name}}</p></div>
         <button  (click)='toogleDetails(i)'>More Details</button>
+
+
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-details>
     </div>
 </div>
