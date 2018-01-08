@@ -1,12 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>  Welcome to {{ title }}!  </h1>
-  </div>
-  <div>
-  <div *ngFor='let quote of quotes;let i = index'>
-        <li >{{quote.name}}</li>
-        <button  (click)='toogleDetails(i)'>More Details</button>
 
-        <app-quote-details *ngIf="quote.showDescription" [quote]='quote'></app-quote-details>
+  <div>
+  <div class="well col-md-12" *ngFor='let quote of quotes;let i = index'>
+        <div >
+
+          <div><p>{{quote.name}}</p></div>
+        <button  (click)='toogleDetails(i)'>More Details</button>
+        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuote($event,i)'></app-quote-details>
+
     </div>
 </div>
+  </div>
