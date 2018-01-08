@@ -9,5 +9,9 @@ Typescript,HTML,CSS
 ## Setup and Installation
 + Make sure you are on inernet with browser i.e chrome installed in your computer
 + Web browser
+## Support and contact details
+
+gitgub user-name:evantoh
+gmail:evanmwenda@gmail.com
 ## license MIT
 MIT Copyright (c) {year} Evans Mwenda
